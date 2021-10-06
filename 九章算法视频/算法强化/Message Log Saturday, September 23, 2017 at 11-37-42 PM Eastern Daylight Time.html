@@ -1,0 +1,207 @@
+<html><head><style type="text/css"><meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+body 
+{
+    margin: 6px;
+    
+    max-width: 100%; /* fix our max width to 100% of our containing frame */
+    word-wrap: break-word; /* ok to break words if text wrap is needed */
+    
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    
+    font-family: arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    
+    line-height: 2px;
+}
+
+.msg_entry 
+{
+	display: block;
+	font-size: 14px;
+	margin-bottom: 6px;
+	
+	/* webkit extension for rounded boxes, ok if it doesn't work */
+	-webkit-border-radius: 3px;
+	
+	/* gecko extension for rounded boxes, ok if it doesn't work */
+	-moz-border-radius: 3px;
+	
+	/* CCS3 rounded boxes, ok if it doesn't work */
+	border-radius: 3px;
+	
+	border-width: 1px;
+	border-style: solid;
+    
+    margin: 0px 0px;
+	
+	/* webkit extension for shadows, ok if it doesn't work */
+	-webkit-box-shadow: rgba(0, 0, 0, .5) 0px 1px 2px;
+}
+
+.msg_entry h1 
+{
+	/* webkit extension for rounded boxes, ok if it doesn't work */
+    -webkit-border-bottom-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    
+    /* gecko extension for rounded boxes, ok if it doesn't work */
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    
+    /* CCS3 rounded boxes, ok if it doesn't work */
+    -border-bottom-right-radius: 0px;
+    -border-bottom-left-radius: 0px;
+
+    background-color: transparent;
+    
+    margin: 2px 0px;
+    padding: 0px 6px;
+    line-height: 100%;
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+.msg_entry p 
+{
+	/* webkit extension for rounded boxes */
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-top-left-radius: 0px;
+    
+    /* gecko extension for rounded boxes */
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-topleft: 0px;
+    
+    /* CCS3 rounded boxes */
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    
+    background-color: rgb(255, 255, 255); /* for those that don't yet support rgba make sure we are at least white */
+    background-color: rgba(255, 255, 255, 0.75); /* translucent white so we get the tint of our background */
+    
+    padding: 2px 6px;
+    margin: 0px 0px;
+    line-height: 100%;
+    word-wrap: break-word; /* ok to break words if text wrap is needed */
+}
+
+.msg_entry.chat.welcome, .msg_entry.chat.message
+{
+	background-color: rgb(217, 240, 211);   /* light green */
+	border-color: rgb(217, 240, 211);       /* light green */
+}
+
+.msg_entry.chat.welcome p, .msg_entry.chat.message p
+{
+    background-color: transparent;
+}
+
+.msg_entry.chat.incoming, .msg_entry.chat.outgoing
+{
+	background-color: rgb(216, 237, 254);   /* light blue */
+	border-color: rgb(216, 237, 254);       /* light blue */
+}
+
+.msg_entry.chat.incoming h1, .msg_entry.chat.outgoing h1
+{
+	color: rgb(2, 101, 203);                /* blue */
+}
+
+.msg_entry.chat.incoming.to_all, .msg_entry.chat.outgoing.to_all
+{
+	background-color: rgb(217, 240, 211);   /* light green */
+	border-color: rgb(217, 240, 211);       /* light green */
+}
+
+.msg_entry.chat.incoming.to_all h1, .msg_entry.chat.outgoing.to_all h1
+{
+	color: rgb(0, 102, 2);                  /* green */
+}
+
+.msg_entry.chat.incoming.private, .msg_entry.chat.outgoing.private 
+{
+	background-color: rgb(254, 208, 208);   /* light red */
+	border-color: rgb(254, 208, 208);       /* light red */
+}
+
+.msg_entry.chat.incoming.private h1, .msg_entry.chat.outgoing.private h1 
+{
+	color: rgb(153, 1, 0);                  /* red */
+}
+
+.msg_entry.questionanswer.remote
+{
+	background-color: rgb(217, 240, 211);   /* light green */
+	border-color: rgb(217, 240, 211);       /* light green */
+}
+
+.msg_entry.questionanswer.remote label
+{
+    color: rgb(0, 102, 2);                  /* green */
+    text-align: right;
+}
+
+.msg_entry.questionanswer.remote h1
+{
+    color: rgb(0, 102, 2);                  /* green */
+}
+
+.msg_entry.questionanswer.local.public
+{
+	background-color: rgb(216, 237, 255);   /* light blue */
+	border-color: rgb(216, 237, 255);       /* light blue */
+}
+
+.msg_entry.questionanswer.local.public label
+{
+    color: rgb(2, 101, 203);                /* blue */
+}
+
+.msg_entry.questionanswer.local.private
+{
+	background-color: rgb(254, 208, 208);   /* light red */
+	border-color: rgb(254, 208, 208);       /* light red */
+}
+
+.msg_entry.questionanswer.local.private label
+{
+    color: rgb(153, 1, 0);                  /* red */
+}
+
+.msg_entry.questionanswer.local.noanswer
+{
+    background-color: rgb(238, 238, 238);   /* light gray */
+    border-color: rgb(238, 238, 238);       /* light gray */
+    color: rgb(136, 136, 136);              /* gray */
+}
+
+.msg_entry.questionanswer.local.noanswer p
+{
+    background-color: transparent;
+}
+
+.chat-header
+{
+    padding-bottom:4px;
+}
+
+.timestamp
+{
+    position: relative;
+    float: right;
+    text-align: right;
+    margin-left: 10 px;
+}
+
+
+
+</style>
+</head><body><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>可以</p><p><label>A: </label>https://coderpad.io/</p></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>想充实简历 写项目什么的 上完这个课有什么推荐的课程吗？</p><p><label>A: </label>Android 项目实战和Big Data 项目实战都是很好的项目课程哦</p></div><br><div class="msg_entry questionanswer local noanswer"><h1><label>Q: </label>4</h1></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>感觉除了二分法和 BFS 以外，一直都是和 DFS 有关的内容~ DFS 这部分在面试中是很重要吗？？</p><p><label>A: </label>是的</p></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>矩阵上的bfs还没完全理解</p><p><label>A: </label>矩阵可以看成每个格子是一个点，和四个相邻的格子(或根据题目要求)有一条边，然后在这个图上做bfs</p></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>请问面试中会被经常要求不递归的dfs吗？</p><p><label>A: </label>不会，最多让你写个非递归的树遍历</p></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>为什么BFS 一份努力 十分回报呢~</p><p><label>A: </label>因为基本上所有bfs都可以套同一个模板</p></div><br><div class="msg_entry questionanswer local noanswer"><h1><label>Q: </label>1</h1></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>startIndex这个parameter为什么不能在递归的时候还是用startIndex而是用i呢？</p><p><label>A: </label>startindex传入的时候是0，那再整个程序执行的时候一直都是0，会有很多重复的结果</p></div><br><div class="msg_entry questionanswer local noanswer"><h1><label>Q: </label>s == s[::-1]</h1></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>什么是 palindrome</p><p><label>A: </label>回文串，正着读和反着读一样的字符串</p></div><br><div class="msg_entry questionanswer local noanswer"><h1><label>Q: </label>为什么是i= n-3 和j = i+2?</h1></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>n^2</p><p><label>A: </label>本期九章算法班已到中期，希望您在百忙之中可以抽出时间来完成这份问卷，来帮助我们做的更好，谢谢！http://cn.mikecrm.com/211YV0j 
+</p></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>老师的歌单好魔性啊</p><p><label>A: </label>本期九章算法班已到中期，希望您在百忙之中可以抽出时间来完成这份问卷，来帮助我们做的更好，谢谢！http://cn.mikecrm.com/211YV0j 
+</p></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>subarray, subsequence, subset, substring 能不能一起区分一下</p><p><label>A: </label>子数组，子序列，子集，子串</p></div><br><div class="msg_entry questionanswer local public"><h1><label>Q: </label>为什么是i= n-3 和j = i+2?</h1><p><label>A: </label>因为isPalindrome[n-2][n-1]和isPalindrome[i][i+1]在上一个循环已经判断过了</p></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>能不能重复一下回文串优化的原理？</p><p><label>A: </label>如果[i+1,j-1]是回文串，且第i个字符和第j个字符相等，那么[i,j]肯定也是回文串，就不需要把[i,j]全部判断一遍是不是回文串</p></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>请问刚才那个问题什么是n^2, 我刚才没听到</p><p><label>A: </label>因为要枚举起点和终点，字符串长度是n，每个起点对应n个终点，所以是n^2</p></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>刚刚combination sum那道题combination.remove(combination.size() -1)不太明白</p><p><label>A: </label>这是回溯法的操作，要移除上一次的操作避免影响之后的操作</p></div><br><div class="msg_entry questionanswer local private"><h1><label>Q: </label>permutations 第一版里用set的去重去的是哪种重复能解释一下吗</h1><p><label>A: </label>同一个元素取多次的重复</p></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>助教你好， 不太明白permutation II 为何要加 visited[]这个参数，而其他的如sebset II 不需要这个visited参数去去重
+</p><p><label>A: </label>subset是无序的，每个元素只有取和不取两种情况，permutation取来以后还有放在哪的区别，类似于排列数和组合数的区别</p></div><br><div class="msg_entry questionanswer local private"><h1><label>Q: </label>permutations原版不是n个distinct Numbers吗 怎么会一个元素取多次呢</h1><p><label>A: </label>set就是用来记录这个元素有没有取过，用一个visit记录应该也是一样的</p></div><br><div class="msg_entry questionanswer local private"><h1><label>Q: </label>permutations原版不是n个distinct Numbers吗 怎么会一个元素取多次呢</h1><p><label>A: </label>用set或者数组标记以后，下次枚举到这个数就直接跳过，就不会取多次了</p></div><br><div class="msg_entry questionanswer local private"><h1><label>Q: </label>能举个例子哪种会重复吗？感觉如果sort以后从前往后for 循环的话 根本不会碰到重复啊？</h1><p><label>A: </label>每次的for循环是从0开始的</p></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>为什么这里是i != 0而不是 i != startIndex? 什么情况下用 i != 0？ 什么情况下用 i != startIndex?</p><p><label>A: </label>startindex一定要枚举到的情况，就用i!=startindex,反之用i!=0</p></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>为什么不是25的L次幂？</p><p><label>A: </label>一次只能变一个字母</p></div><br><div class="msg_entry questionanswer local noanswer"><h1><label>Q: </label>0</h1></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>为什么是0（25*L*L）而不是0（25*L）？</p><p><label>A: </label>因为在hashset里查找还要O(L)的时间</p></div><br><div class="msg_entry questionanswer local noanswer"><h1><label>Q: </label>1</h1></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>那啥时候是O(1)呢，除了整数或float？</p><p><label>A: </label>除了数字和string，其他的hashfunction都要自己写，看你自己的实现方式</p></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>hashmap是python里的dictionary吗</p><p><label>A: </label>是的</p></div><br><div class="msg_entry questionanswer remote"><h1>Audience Question</h1><p><label>Q: </label>单词总数N 是什么单词总数？ dic 里面的单词总数吗？</p><p><label>A: </label>输入的单词总数</p></div></body></html>
